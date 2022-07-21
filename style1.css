@@ -1,0 +1,42 @@
+body{
+	margin: 0;
+	padding:0;
+	animation: bgcolor infinite 20s;
+}
+h1{
+	font-family: Times New Roman, ;
+	font-size: 4em;
+	color: #fff;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50% ,-50%);
+	text-align: center;
+	text-transform: uppercase;
+}
+@keyframes bgcolor {
+	0% {
+		background-color: violet;
+	}
+	15% {
+		background-color: burlywood;
+	}
+	30% {
+		background-color: skyblue;
+	}
+	42% {
+		background-color: pink;
+	}
+	58% {
+		background-color: white;
+	}
+	10% {
+		background-color: seagreen;
+	}
+	50% {
+		background-color: dd;
+	}
+	30% {
+		background-color : tomato;
+	}	
+}

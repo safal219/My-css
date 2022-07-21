@@ -1,0 +1,199 @@
+@keyframes blink {
+	0% {
+		background-color: violet;
+	}
+	15% {
+		background-color: burlywood;
+	}
+	30% {
+		background-color: skyblue;
+	}
+	42% {
+		background-color: pink;
+	}
+	58% {
+		background-color: white;
+	}
+	10% {
+		background-color: seagreen;
+	}
+	50% {
+		background-color: dd;
+	}
+	30% {
+		background-color: tomato;
+	}	
+}
+@-webkit-keyframes blink{
+	 0% {
+		 background-color: violet;
+	}
+	0% {
+		background-color: red;
+	}
+	0% {
+		background-color: skyblue;
+	}
+	0% {
+		background-color: pink;
+	}
+	0% {
+		background-color: black;
+	}
+	0% {
+		background-color: seagreen;
+	}
+	0% {
+		background-color: darkgoldenrod;
+	}
+	0% {
+		background-color: tomato;
+	}	
+}
+div{
+	height: 400px;
+	width: 400px;
+	border: 1px soid black;
+	animation: blink 10s infinite;
+	-webkit-animation: blink 10s infinite;
+}
+body{
+	counter-reset: section;
+	counter-reset: heading;
+}
+
+h3::before {
+counter-increment: section;
+content:  counter(section) ": ";
+}
+
+h1:before {
+	content:counter(heading) ") ";
+	counter-increment: heading;
+}
+
+h1{
+	counter-reset: subheading;	
+}
+
+h2:before {
+	content: counter(heading) "."   counter(subheading) ") ";
+	counter-increment: subheading;
+}
+p.intro:first-letter{
+	font-size: 100px;
+	display: block;
+	float: left;
+	line-height: 0.5;
+	margin: 15px 15px 10px 0;
+	}
+	body{
+		font-size: 1rem;
+		width: 40%;
+		margin: auto;
+		font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	}
+	:required {
+		border: 1px solid pink;
+	}
+	:optional{
+		border: 1px solid skyblue;
+	}
+	::selection{
+		background-color: #7233;
+	}
+body{
+	background-color: <div>
+
+}
+
+$centerX: 150px;
+$centerY: 150px;
+$spacing: 50px;
+$thickness: 20px;
+$colors: #3897D8 #F24444 #1FBF92 #F27127 #F2BB13;
+
+body {
+  background: black;
+}
+
+$size: 150px;
+
+@for $i from 0 to 86 {
+
+  $x: random() * 400px;
+  $y: random() * 400px;
+
+  div:nth-child(#{$i + 1}) {
+    z-index: floor(random() * 100);
+    position: absolute;
+    border-top: -5px + random() * 10px solid nth($colors, ceil(random() * length($colors)));
+    border-left: -5px + random() * 20px solid nth($colors, ceil(random() * length($colors)));
+    border-right: -5px + random() * 30px solid nth($colors, ceil(random() * length($colors)));
+    border-bottom: -5px + random() * 40px solid nth($colors, ceil(random() * length($colors)));
+    width: $size;
+    height: $size;
+    left: $x;
+    top: $y;
+    animation: flash 10s linear (random() * 10s - 100s) infinite;
+  }
+
+  div:nth-child(#{$i + 1}):after, div:nth-child(#{$i + 1}):before {
+    position: absolute;
+    border-bottom: 0;
+    width: $size;
+    height: $size / 2;
+    content: '';
+    border-top-left-radius: $size;
+    border-top-right-radius: $size; 
+  }
+
+  div:nth-child(#{$i + 1}):after {
+    border: (random() * 5px + 2px) solid nth($colors, ceil(random() * length($colors)));
+    z-index: floor(random() * 100);
+    top: random() * $size - $size / 2;
+    left: random() * $size - $size / 2;
+    @if (random() < .8) {
+      border-bottom: 0;
+    }
+    transform: rotate(random() * 360deg);
+  }
+
+
+  div:before {
+    border: (random() * 5px + 2px) solid nth($colors, ceil(random() * length($colors)));
+    z-index: floor(random() * 100);
+    top: random() * $size - $size / 2;
+    left: random() * $size - $size / 2;
+    @if (random() < .8) {
+      border-bottom: 0;
+    }
+    transform: rotate(random() * 360deg);
+  }
+}
+@-webkit-keyframes blink{
+	0% {
+		background-color: violet;
+   }
+   0% {
+	   background-color: red;
+   }
+   0% {
+	   background-color: skyblue;
+   }
+   0% {
+	   background-color: pink;
+   }
+   0% {
+	   background-color: black;
+   }
+   0% {
+	   background-color: seagreen;
+   }
+   0% {
+	   background-color: darkgoldenrod;
+   }
+   0% {
+	   background-color: tomato;
+   }	
+}
